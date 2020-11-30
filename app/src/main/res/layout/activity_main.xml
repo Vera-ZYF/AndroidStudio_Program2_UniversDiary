@@ -51,13 +51,5 @@
             android:layout_span="2"
             android:text="立即注册" />
     </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/create_database"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_span="2"
-            android:text="创建数据库" />
-    </TableRow>
 
 </TableLayout>

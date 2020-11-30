@@ -41,6 +41,7 @@ public class EditDiary extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_diary);
 
+        //获取控件
         diary_title = findViewById(R.id.diary_title);
         diary_author = findViewById(R.id.diary_author);
         diary_time = findViewById(R.id.diary_time);
@@ -69,6 +70,7 @@ public class EditDiary extends AppCompatActivity{
             diary_content.setText(select_content);
         }
 
+        //保存按钮点击事件
         save_diary = findViewById(R.id.save_diary);
         save_diary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,10 +82,6 @@ public class EditDiary extends AppCompatActivity{
                 values.put("diary_time", String.valueOf(diary_time));
                 switch (tag){
                     case INSERT_DIARY:
-                        //final ByteArrayOutputStream os = new ByteArrayOutputStream();
-                        //Bitmap bitmap = ((BitmapDrawable)picture.getDrawable()).getBitmap();
-                        //bitmap.compress(Bitmap.CompressFormat.PNG,100,os);
-                        //values.put("picture",os.toByteArray());
                         db.insert("diary", null, values);
                         values.clear();
                         Toast.makeText(EditDiary.this, "已保存", Toast.LENGTH_SHORT).show();
@@ -99,6 +97,7 @@ public class EditDiary extends AppCompatActivity{
             }
         });
 
+        //删除按钮点击事件
         delete_diary = findViewById(R.id.delete_diary);
         delete_diary.setOnClickListener(new View.OnClickListener() {
             @Override

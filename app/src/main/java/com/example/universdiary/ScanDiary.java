@@ -56,7 +56,7 @@ public class ScanDiary extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ScanDiary.this, EditDiary.class);
-                //将新建或修改传给编辑活动
+                //保存操作
                 intent.putExtra("OPERATE", INSERT_DIARY);
                 startActivity(intent);
             }
@@ -118,7 +118,7 @@ public class ScanDiary extends AppCompatActivity {
 
 
     private int getDiaryId(int position) {
-        //获取所点击的日记的title
+        //获取所点击的日记的标题
         int ID;
         select_diary = diary.get(position);
         //获取点击日记列表的id

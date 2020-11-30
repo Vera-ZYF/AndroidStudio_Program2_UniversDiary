@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //dbHelper.getWritableDatabase();
                 pref = getSharedPreferences("data", MODE_PRIVATE);
 
                 String u = edit_user.getText().toString();
@@ -58,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 if (u.equals(name) && pwd.equals(password)) {
                     editor = pref.edit();
                     //Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-//                    dbHelper = new DatabaseHelper(MainActivity.this, "MyDiary.db",null,1);
-//                    dbHelper.getWritableDatabase();
                     if(password_remember.isChecked()){
                         editor.putString("name",name);
                         editor.putString("password",password);
