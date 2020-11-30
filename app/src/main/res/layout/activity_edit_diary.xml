@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_diary"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="" />
+    </TableRow>
+
+
+    <TextView
+        android:id="@+id/diary_time"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:hint="time"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/diary_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:width="3dp"
+        android:background="@drawable/edit_bg"
+        android:hint="请输入日记标题"
+        android:radius="3dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/diary_author"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/edit_bg"
+        android:hint="请输入作者"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/diary_content"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg"
+        android:hint="content"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/save_diary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:text="保存" />
+    <Button
+        android:id="@+id/delete_diary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:text="删除" />
+
+</TableLayout>
+
